@@ -1,0 +1,20 @@
+jq是在linux命令行下解析json的工具
+jq中是过滤的概念
+安装:sudo apt-get install jq
+
+e.g. cat json_file | jq ."key"
+
+jq参数选项:
+-c 将value一行打印出来
+-n 使用null作为输入值
+-e 设置基于输出的退出状态代码
+-s 读取数组中的元素作为输入,并且应用这些输入进行过滤
+-r 输出原始的字符串,不是json文本
+-R 读入原始的字符床,不是json格式
+-C 带有颜色的json
+-M 黑白颜色的json,不是带有颜色的json
+--tab 使用tab进行缩进
+--arg a v 将变量a中的值设置到<v>中
+--argjson a v 设置变量a中的值到json <v>中
+--slurpfile a f 设置变量a中的值
+更多内容请看 man jq
